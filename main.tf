@@ -25,7 +25,7 @@ provider "aws" {
 }
 
 variable "count" {
-  default = 2
+  default = 3
 }
 
 resource "aws_instance" "web" {
@@ -39,7 +39,7 @@ resource "aws_instance" "web" {
   tags {
     "Name"     = "${format("web-%03d", count.index + 1)}"
     "Identity" = "NWI-vault-trout"
-    "user"     = "john"
+    "user"     = "dave"
   }
 }
 
